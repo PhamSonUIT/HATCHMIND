@@ -1,0 +1,108 @@
+/* Vẫn giữ nguyên cấu hình chung */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative; /* Cho phép định vị các phần tử con */
+}
+
+/* Định vị các thành phần ở góc trên bên phải */
+.buttons,
+canvas,
+#label-container,
+#message-container,
+audio {
+    position: absolute;
+    top: 10px; /* Cách mép trên 10px */
+    right: 10px; /* Cách mép phải 10px */
+    z-index: 10; /* Đảm bảo luôn nổi trên */
+}
+canvas{width: 200px;}
+/* Điều chỉnh khoảng cách giữa các thành phần */
+.buttons {
+    top: 10px; /* Giữ nút Start ở góc trên bên phải */
+}
+
+canvas {
+    top: 60px; /* Dưới nút Start */
+}
+
+#label-container {
+    top: 550px; /* Dưới canvas */
+}
+
+#message-container {
+    top: 600px; /* Dưới label container */
+}
+
+audio {
+    top: 650px; /* Dưới message container */
+    right: 10px;
+}
+
+/* Giữ nguyên các cấu hình nút */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.start-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.start-button:hover {
+    background-color: #2980b9;
+}
+
+canvas {
+    display: block;
+    margin-top: 0; /* Reset margin-top */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.label-container {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+
+.message-container {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff6b6b;
+}
+
+audio {
+    margin-top: 0; /* Reset margin-top */
+}
+
+img {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    right:0 ;
+    z-index: -1;
+}

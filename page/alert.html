@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo tùy chỉnh</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showModal()">Hiển thị thông báo</button>
+
+    <div class="overlay" id="overlay" onclick="hideModal()"></div>
+    <div class="modal" id="modal">
+        <p>Đây là một thông báo tùy chỉnh!</p>
+        <button onclick="hideModal()">Đóng</button>
+    </div>
+
+    <script>
+        function showModal() {
+            document.getElementById("modal").classList.add("active");
+            document.getElementById("overlay").classList.add("active");
+        }
+
+        function hideModal() {
+            document.getElementById("modal").classList.remove("active");
+            document.getElementById("overlay").classList.remove("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+.pages{
+    display: flex;
+    background-image: url("../imgItem/1.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:100vh;
+    width:100vw;
+    /* margin-top:5%; */
+}
+.pages .left{
+    width: 70%;
+    margin-right: 5%;
+    position:relative;
+    display:flex;
+}
+.left audio{
+    position:absolute;
+    bottom:0;
+    left:50;
+    width:100%;
+}
+.left p{
+    justify-content: center;
+    align-items: center;;
+    margin: 0 auto;
+}
+.pages .right{
+    height: 500px;
+    width:30%;
+    align-items: center;
+    background-color: red;
+
+}
+.right p {
+    
+    font-size: 3rem;
+}
